@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02f707fe-f4d4-4c3e-b2cd-1ecf65d5374d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="7"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tarif_antar.`kd_wilayah` AS tarif_antar_kd_wilayah,
+     tarif_antar.`nama_wilayah` AS tarif_antar_nama_wilayah,
+     tarif_antar.`tarif_kirim` AS tarif_antar_tarif_kirim
+FROM
+     `tarif_antar` tarif_antar]]>
+	</queryString>
+	<field name="tarif_antar_kd_wilayah" class="java.lang.String"/>
+	<field name="tarif_antar_nama_wilayah" class="java.lang.String"/>
+	<field name="tarif_antar_tarif_kirim" class="java.lang.Integer"/>
+	<group name="tarif_antar_kd_wilayah">
+		<groupExpression><![CDATA[$F{tarif_antar_kd_wilayah}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="0b890565-e611-4360-b9eb-0dbd0ea3f3ea"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESTAURANT A3 FOOD & DRINK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="20" uuid="4d687c66-8755-4a7d-aa99-2f76f5d3f1a2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. C. Simanjuntak, Terban]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="555" height="20" uuid="f269c3e3-bf96-4313-bcdf-5916e6e2ca08"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telp 021726186476]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-24" y="67" width="598" height="1" uuid="7bcfa97a-1605-4a7c-b6fc-c3cfb8c2f14c"/>
+			</line>
+			<line>
+				<reportElement x="-24" y="74" width="598" height="1" uuid="aa0075bf-08eb-4b31-bf84-e8e7f797c040"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="192" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="20" width="206" height="20" uuid="d84f35ba-2f45-4fa1-949c-01673bf3391b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA WILAYAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="0" width="55" height="20" uuid="a0e2cf31-4ddb-4b9a-bb26-8b82e9600232"/>
+				<text><![CDATA[Yogyakarta,]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="502" y="0" width="53" height="20" uuid="39761c64-657a-4837-9842-0a8cf4301474"/>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="217" y="60" width="147" height="132" uuid="2de1b5ff-877e-4646-a6b8-b6314ce96a7b"/>
+				<imageExpression><![CDATA["K:\\Baper\\new\\AplikasiRestoran\\src\\Report\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="334" y="41" width="100" height="20" uuid="efa60629-2bb0-416f-990d-a3d55754a2a2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="234" y="41" width="100" height="20" uuid="ea184747-0e3d-4c28-ae26-b9ce87425f65"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="134" y="41" width="100" height="20" uuid="4e606603-f781-4b80-9957-47a4e4014a75"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="134" y="41" width="100" height="20" uuid="a0346690-bbcb-47ce-860c-05521466359d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Wilayah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="41" width="100" height="20" uuid="362a7eb0-a805-4c29-af24-97118433aec6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Wilayah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="41" width="100" height="20" uuid="b55694f6-ef9a-4366-acfc-475a8cb3ee51"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tarif Antar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="334" y="0" width="100" height="20" uuid="ffd408e1-963a-41d0-a888-c224a7a4b8b1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="234" y="0" width="100" height="20" uuid="dc7e213c-11c2-4b97-9e50-f7814dc9ecf9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="134" y="0" width="100" height="20" uuid="aed792e6-779d-429c-96fd-96799f261c42"/>
+			</rectangle>
+			<textField>
+				<reportElement x="134" y="0" width="100" height="20" uuid="074580a7-b422-436c-9ae0-a4e56f39d55f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarif_antar_kd_wilayah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="100" height="20" uuid="ecdf9727-49f7-4af2-881e-cedad8f2baa9"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarif_antar_nama_wilayah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="0" width="100" height="20" uuid="015a1658-da47-46d2-a3d7-9761b6f14273"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarif_antar_tarif_kirim}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="207" splitType="Stretch">
+			<staticText>
+				<reportElement x="447" y="0" width="72" height="20" uuid="ab791c85-679f-4c28-b1a5-edc90f1b4854"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="464" y="20" width="38" height="20" uuid="6ee460ff-2de6-4e42-8a00-ad6af83214ef"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="126" width="80" height="20" uuid="5bba90da-fc6b-4305-b66b-ba6f65d49927"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Annas Al Amin]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="187" width="80" height="20" uuid="1f873467-eae4-424f-8811-265136ebca44"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="187" width="40" height="20" uuid="71d38838-1855-4dc3-8862-f2b2ea3f1568"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-24" y="167" width="598" height="1" uuid="855d469f-ebef-42ae-9ab2-8f12e61f6798"/>
+			</line>
+			<line>
+				<reportElement x="-24" y="173" width="598" height="1" uuid="0c2cb70e-bf56-4279-80a0-c27f737606fe"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="28" splitType="Stretch"/>
+	</summary>
+</jasperReport>

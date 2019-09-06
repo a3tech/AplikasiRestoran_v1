@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9df8a004-fa1c-4c2a-b600-491fa8649207">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="71"/>
+	<property name="ireport.y" value="144"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     karyawan.`id_karyawan` AS karyawan_id_karyawan,
+     karyawan.`nama_karyawan` AS karyawan_nama_karyawan,
+     karyawan.`username` AS karyawan_username,
+     karyawan.`password` AS karyawan_password
+FROM
+     `karyawan` karyawan]]>
+	</queryString>
+	<field name="karyawan_id_karyawan" class="java.lang.String"/>
+	<field name="karyawan_nama_karyawan" class="java.lang.String"/>
+	<field name="karyawan_username" class="java.lang.String"/>
+	<field name="karyawan_password" class="java.lang.String"/>
+	<group name="karyawan_id_karyawan">
+		<groupExpression><![CDATA[$F{karyawan_id_karyawan}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="ef7b4cf2-22aa-459a-ba12-f7b454dc8091"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESTAURANT A3 FOOD & DRINK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="20" uuid="9f65b8fe-c093-455a-b360-dc62a29eca65"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. C. Simanjuntak, Terban]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="555" height="20" uuid="d5ae8885-b092-4610-a972-cae72bc5a7b1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telp 021726186476]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="66" width="595" height="1" uuid="9d666071-d135-4b9f-a5ec-c31d45b05b13"/>
+			</line>
+			<line>
+				<reportElement x="-20" y="72" width="595" height="1" uuid="685abf23-9102-4103-b591-7f8f59be1373"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="185" splitType="Stretch">
+			<staticText>
+				<reportElement x="447" y="0" width="55" height="20" uuid="b49b8133-9138-4261-99ae-98d8f49a7a5f"/>
+				<text><![CDATA[Yogyakarta,]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="502" y="0" width="53" height="20" uuid="389372c8-4163-496c-a313-77a05e8706d0"/>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="185" y="20" width="206" height="20" uuid="d5197235-b1f4-494d-b606-d693ffe4992d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA KARYAWAN]]></text>
+			</staticText>
+			<image>
+				<reportElement x="213" y="53" width="147" height="132" uuid="432b9044-f298-4b06-ab57-ef1ffa841cbc"/>
+				<imageExpression><![CDATA["K:\\Baper\\new\\AplikasiRestoran\\src\\Report\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="391" y="41" width="100" height="20" uuid="1261ae01-bf44-49d2-bc61-4be8ddcddb0b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="291" y="41" width="100" height="20" uuid="ee1643d8-e186-4cee-92e5-341b813c6ff5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="191" y="41" width="100" height="20" uuid="71b63a59-505e-4afe-83d8-7f96d0a0ae5c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="91" y="41" width="100" height="20" uuid="5bf78366-f653-4da7-b296-81ab994955c5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="91" y="41" width="100" height="20" uuid="ba7c18b1-f44e-48cc-b8e4-d941834cca3d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="41" width="100" height="20" uuid="9a0203e9-630f-4018-b722-adeeb9389a18"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="41" width="100" height="20" uuid="e52614dd-24f1-4d7c-8806-dec21fa07b8c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="41" width="100" height="20" uuid="92da933a-bf47-4c30-9592-ec85e0d22284"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="391" y="0" width="100" height="20" uuid="668a3490-54b5-474e-bab2-cf0f45e0e6ab"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="291" y="0" width="100" height="20" uuid="9ac7a6ed-9f9b-4c0b-8073-34ba197fb8e8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="191" y="0" width="100" height="20" uuid="236013cf-6874-4043-ac0a-75f4d2c7afd4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="91" y="0" width="100" height="20" uuid="c4eec809-c741-4c70-b02e-676f07bea2a1"/>
+			</rectangle>
+			<textField>
+				<reportElement x="91" y="0" width="100" height="20" uuid="465fba0f-10a8-4498-8623-6dfae9bdd16f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{karyawan_id_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="100" height="20" uuid="6ac0f930-8ecd-4d60-98df-dab896068d7a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{karyawan_username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="0" width="100" height="20" uuid="96f84d93-4295-4df8-939f-dcb16f64ec53"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{karyawan_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="0" width="100" height="20" uuid="7e86444d-9d7e-4421-87ae-570967f97b33"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{karyawan_nama_karyawan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="200" splitType="Stretch">
+			<staticText>
+				<reportElement x="430" y="0" width="72" height="20" uuid="23a7bff8-3c57-4015-ab71-7c79cbe39754"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="20" width="37" height="20" uuid="48571b85-909a-4912-bdb1-7ee5ff9117a8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="117" width="80" height="20" uuid="36b66a58-a04d-4271-b2d0-00be1221aa80"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Annas Al Amin]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="180" width="55" height="20" uuid="63fbff81-f269-4970-a607-7f4b508e3c39"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="180" width="40" height="20" uuid="f9bf9c5c-9375-4887-a5c8-de9f788e558a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-20" y="150" width="595" height="1" uuid="4a716f80-15b1-4d2a-9f13-d3c8601d09e7"/>
+			</line>
+			<line>
+				<reportElement x="-20" y="157" width="595" height="1" uuid="9b5b2501-5881-4c4d-a471-c820cd98e471"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
